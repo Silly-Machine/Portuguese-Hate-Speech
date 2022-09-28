@@ -1,7 +1,9 @@
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
+from collections import Counter
 import pandas as pd
+import spacy
 
 
 def ColumnsOrder(df):
@@ -33,3 +35,17 @@ def NgramsCount(corpus, nitems=2, rank=-1):
                   for word, idx in vectorizer.vocabulary_.items()]
     words_freq = sorted(words_freq, key=lambda x: x[1], reverse=True)
     return pd.DataFrame(words_freq[:rank], columns=[f'{str(nitems)}_gram', 'frequency'])
+
+
+def ItemsCounter(text):
+    nlp = spacy.load('pt_core_news_sm')
+    item_count = [token.pos_ for token in nlp(text)]
+    return Counter(item_count)
+
+
+def TextualItems(df, column='text_nonstop'):
+    items = df[column].apply(ItemsCounter).apply(pd.Series)
+    items.columns = map(str.lower, items.columns)
+    items.drop(columns=['x'], inplace=True)
+    items.fillna(0, inplace=True)
+    return items.astype(int)
