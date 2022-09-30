@@ -148,5 +148,6 @@ mlruns
 somedb.db
 
 # adtiona data
+*.txt
 *.json
 *.xlsx
