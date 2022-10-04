@@ -26,7 +26,7 @@ The project is organized in the following directory structure:
 Clone the project:
 
 ```sh
-git git@github.com:Silly-Machine/Portuguese-Hate-Speech.git
+git clone git@github.com:Silly-Machine/Portuguese-Hate-Speech.git
 ```
 
 Is highly recommended to create the following [`conda`](https://docs.conda.io/en/latest/miniconda.html) virtual environment before installing the dependencies.
