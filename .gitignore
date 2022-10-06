@@ -151,3 +151,4 @@ somedb.db
 *.txt
 *.json
 *.xlsx
+*.csv
