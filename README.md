@@ -52,3 +52,10 @@ Install project dependencies:
 ```sh
 poetry install
 ```
+
+## Getting the data
+
+* You can either place your corpus in the `data/corpus` folder, or run the notebook called `1-data-processing.ipynb` to download and process an existing corpus.
+
+* The pre-trained word embedding vectors used in this project can be downloaded at the NILC group repository at [link](http://nilc.icmc.usp.br/nilc/index.php/repositorio-de-word-embeddings-do-nilc), and placed in the respective folders.
+
