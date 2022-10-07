@@ -5,9 +5,13 @@
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-000000.svg)](https://www.python.org/downloads/release/python-360/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-## Scope, references and disclaimer
+## Scope
 
-This project aims to develop a classification model capable of identifying the presence of hate speech in texts written in portuguese.The original dataset was built by [Fortuna](https://github.com/paulafortuna) _et. al._ and used in the article [Hierarchically Labeled Portuguese Hate Speech Dataset](https://aclanthology.org/W19-3510.pdf). Every attempt has been taken to protect the identity of the Twitter users in the dataset by modifying it appropriately. The dataset is strictly for research purposes and any attempt to violate the privacy of the Twitter users mentioned knowingly or unknowingly will not be liable to the authors of the paper or repository.
+This project aims to develop a classification model capable of identifying the presence of hate speech in texts written in portuguese.
+
+## References and disclaimer
+
+The original dataset was built by [Fortuna](https://github.com/paulafortuna) _et. al._ and used in the article [Hierarchically Labeled Portuguese Hate Speech Dataset](https://aclanthology.org/W19-3510.pdf). Every attempt has been taken to protect the identity of the Twitter users in the dataset by modifying it appropriately. The dataset is strictly for research purposes and any attempt to violate the privacy of the Twitter users mentioned knowingly or unknowingly will not be liable to the authors of the paper or repository.
 
 ## Directory Structure
 
@@ -55,7 +59,6 @@ poetry install
 
 ## Getting the data
 
-* You can either place your corpus in the `data/corpus` folder, or run the notebook called `1-data-processing.ipynb` to download and process an existing corpus.
+- You can either place your corpus in the `data/corpus` folder, or run the notebook called `1-data-processing.ipynb` to download and process an existing corpus.
 
-* The pre-trained word embedding vectors used in this project can be downloaded at the NILC group repository at [link](http://nilc.icmc.usp.br/nilc/index.php/repositorio-de-word-embeddings-do-nilc), and placed in the respective folders.
-
+- The pre-trained word embedding vectors used in this project can be downloaded at the NILC group repository at [link](http://nilc.icmc.usp.br/nilc/index.php/repositorio-de-word-embeddings-do-nilc), and placed in the respective folders.
