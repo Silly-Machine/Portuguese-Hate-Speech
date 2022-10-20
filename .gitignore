@@ -147,8 +147,13 @@ N/
 mlruns
 somedb.db
 
-# adtiona data
+# data extensions
 *.txt
 *.json
 *.xlsx
 *.csv
+*.db
+
+#ml files
+artifacts/
+mlruns/
