@@ -32,6 +32,8 @@ xgboost = "^1.6.2"
 mlflow = "^1.29.0"
 scikeras = "^0.9.0"
 tensorflow = "^2.10.0"
+tensorflow-gpu = "^2.10.0"
+numba = "^0.56.3"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^22.8.0", allow-prereleases = true}

@@ -15,7 +15,7 @@ def StandardNormalizer(text):
     return text
 
 
-def IncognitoNormalizer(text):
+def Normalizer(text):
 
     text = re.sub(r"@[^\s]+", "nome_usuario", text)
     text = clean(
@@ -38,6 +38,7 @@ def IncognitoNormalizer(text):
         replace_with_phone_number="numero_telefone",
         replace_with_currency_symbol="simbolo_monetario",
     )
+    #text = ''.join([i for i in text if not i.isdigit()])
     return text
 
 
