@@ -17,7 +17,8 @@ import os
 
 
 class experiment:
-    def __init__(self, exp_name, model, model_name, host, port, pipeline=True):
+    def __init__(
+        self, exp_name, model, model_name, host="localhost", port=7500, pipeline=True):
         # Checking server
         experiment.cnx(host, port)
         # Experiment atributes
@@ -48,7 +49,7 @@ class experiment:
                 auc = roc_auc_score(y_test, y_predict)
                 f1 = f1_score(y_test, y_predict)
                 # Save
-                mlflow.log_params({"total data": total_data, "test split": test_split})
+                mlflow.log_params({"total_data": total_data, "test_split": test_split})
                 mlflow.sklearn.log_model(self.model, self.model_name)
                 mlflow.log_metric("precision", pre)
                 mlflow.log_metric("accuracy", acc)
@@ -61,7 +62,9 @@ class experiment:
                     return y_predict
                 else:
                     print("[MLFLOW] [FINISHED] experiment executed successfully")
-                    print(f"acc:{acc} - rec:{rec} - auc:{auc} - f1:{f1}")
+                    print(
+                        f"model:{self.model_name} - acc:{acc} - rec:{rec} - auc:{auc} - f1:{f1} \n"
+                    )
 
     @staticmethod
     def cnx(host, port):
